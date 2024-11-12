@@ -68,8 +68,36 @@ while (z < 5)
 // 6
 
 // 7
-
+Console.WriteLine("skriv inte en siffra");
+bool siffra = true;
+int siffraI;
+while(siffra == true)
+{
+    string siffraS = Console.ReadLine();
+    siffra = int.TryParse(siffraS, out siffraI);
+    Console.WriteLine("jag sa, inte en siffra");
+}
 // 7
+
+// 8
+Console.WriteLine("gissa rätt siffra (1-1000)");
+
+int gissad = 0;
+while(gissad != 839)
+{
+    string gissning = Console.ReadLine();
+    int.TryParse(gissning, out gissad);
+    if (gissad >= 839)
+    {
+        Console.WriteLine($"{gissad}är för högt!");
+    }
+    if (gissad <= 839)
+    {
+        Console.WriteLine($"{gissad} är för lågt!");
+    }
+}
+Console.WriteLine("rätt");
+// 8
 
 
 
